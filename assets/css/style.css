@@ -1,0 +1,72 @@
+body{
+    width: 960px;
+    height: 1000px; 
+    background: url("..//images/background.image2.png"); 
+    background-size: 100%
+}
+
+#titleBox{
+    height: 100px;
+    width: 250px;
+    background: #cb6f32;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+}
+
+#orangeTitleBox{
+    margin: 20px 10px 10px 20px
+}
+
+#instructionsBox{
+    width: 450px;
+    height: 450px;
+    background: #fce6cf;
+    color: white;
+    border-radius: 15px;
+    margin: 10px auto 10px 20px;
+    color: green;
+    padding: 15px;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+
+#randomNumWlBox{
+    margin: 10px auto 10px 20px;
+    width: 550px;
+    height: 150px;
+}
+
+.randomNumberBox{
+    width: 200px;
+    height: 150px;
+    float: left;
+    background: #2dc771;
+    color: #520055;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 35px;
+}
+
+.WinLoseBox{
+    width: 100px;
+    height: 170px;
+    float: left;
+    background: #39fefd;
+    color: #45acb1;
+    padding: 10px;
+    border-radius: 15px;
+    margin: auto 10px 10px 10px;
+}
+        
+
+
+
+
+  
+
