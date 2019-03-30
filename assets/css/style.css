@@ -1,82 +1,104 @@
-body{
-    width: 960px;
-    height: 1000px; 
+body {
+    max-width: 960px;
+    max-height: 1000px; 
     background: url("..//images/background.image2.png"); 
-    background-size: 100%
+    background-size: 100%;
 }
 
-.card .card-header{
-    text-align: center;
-    background: green;
+h1 {
+    background-color: green;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color: white;
+    width: 650px;
+    margin: 10px;
+    border-radius: 15px;
+    text-align: center
+}
+
+#instructions {
+    background-color: #d866b4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #613b68;
+    font-size: 20px;
+    line-height: 20px;
+    width: 650px;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+#random-number {
+    width: 270px;
+    height: 150px;
+    padding: 10px;
+    background-color: darkcyan;
+    margin: 10px;
     color: black;
-    font: bold;
-    font-size: 60px; 
+    font-size: 40px;
+    float: left;
+    border-radius: 15px;
+}
+
+#game-count {
+    background-color: aqua;
+    width: 270px;
+    height: 150px;
+    padding: 12px;
+    padding-top: 20px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
+    float: left;
+    line-height: 40px;
+    border-radius: 15px;
 }
 
-.card {
-    margin-top: 20px;
-    margin-left: 160px;
-    width: 100%;
-}
-
-.card1 {
-    margin: 10px 10px 10px 100px;
-    width: 125%;
-    font-size: 18px;
-    height: 200px;
-    }
-
-.crystals {
-    margin-right:400px;
-    margin-top: 10px;
-}
-
-#randomNumWlBox{
-    margin: 10px auto 10px 20px;
-    width: 550px;
-    height: 150px;
-    font-size: 40px;
-}
-
-#crystals{
+.images {
     clear: both;
-    margin: 20px 10px 10px 20px;
 }
 
-#userTotalScore{
-    width: 300px;
-    height: 130px;
-    background: #f0e706;
-    margin: 10px auto 10px 20px;
-    border-radius: 15px;
-    padding: 15px;
-    font-size: 20px;
-    text-align: center
-}
-
-.randomNumberBox{
-    width: 200px;
-    height: 150px;
+#crystal-1,
+#crystal-2,
+#crystal-3,
+#crystal-4 {
+    height: 100px;
+    width: 125px;
+    margin:10px;
     float: left;
-    background: #2dc771;
-    color: #520055;
-    padding: 20px;
-    border-radius: 15px;
-    font-size: 60px;
-    text-align: center
 }
 
-.WinLoseBox{
-    width: 100px;
-    height: 170px;
+#total-score-is {
+    clear: both;
+    width: 270px;
+    background-color: #4fe46d;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    color:white;
+    /* line-height: 20px; */
+    margin: 10px;
+    padding-top: 15px;
+    border-radius: 15px;
     float: left;
-    background: #39fefd;
-    color: #45acb1;
+    text-align: center;
+}
+
+#your-score {
+    width: 270px;
+    height: 83px;
     padding: 10px;
+    margin: 10px;
+    background-color: #4fe46d;
+    color: antiquewhite;
+    font-size: 40px;
     border-radius: 15px;
-    margin: auto 10px 10px 10px;
-    font-size: 20px;
+    float: left
 }
- 
+
+
+
+
+
+
+
