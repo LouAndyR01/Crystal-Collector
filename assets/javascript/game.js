@@ -13,8 +13,8 @@
     // globals to start the game.
     var wins = 0;
     var losses = 0;
-    var ranNum;
     var yourScore = 0;
+    var ranNum;
 
     // linking buttons to the id's of each crystal on the html.
     var green_button = $("#green_crystal");
@@ -33,12 +33,10 @@ function gameStart() {
     blue_button = Math.floor(Math.random() * 12) + 1;
     purple_button = Math.floor(Math.random() * 12) + 1;
 
-    yourScore = 0;
+    yourScore = 0; 
     // console.log(green_button);
-    // console.log(green_button);
-   
+     
 }
-
     // on click functions for each button.
 $("#green_crystal").on("click", function () {
     $("#green_crystal").text(green_button);
@@ -47,23 +45,23 @@ $("#green_crystal").on("click", function () {
     // console.log(green_button);
     // console.log(yourScore);
 });
+
 $("#yellow_crystal").on("click", function () {
     $("#yellow_crystal").text(yellow_button);
     yourScore += yellow_button;
     $("#player_score").text(yourScore);
-    
 });
+
 $("#blue_crystal").on("click", function () {
     $("#blue_crystal").text(blue_button);
     yourScore += blue_button;
-    $("#player_score").text(yourScore);
-   
+    $("#player_score").text(yourScore);   
 });
+
 $("#purple_crystal").on("click", function () {
     $("#purple_crystal").text(purple_button);
     yourScore += purple_button;
-    $("#player_score").text(yourScore);
-   
+    $("#player_score").text(yourScore);  
 });
     // Checking to see if it is a winner or loser here.
 $(".images").on("click", function () {
