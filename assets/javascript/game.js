@@ -13,7 +13,7 @@
     // globals to start the game.
     var wins = 0;
     var losses = 0;
-    var answer;
+    var ranNum;
     var yourScore = 0;
 
     // linking buttons to the id's of each crystal on the html.
@@ -24,9 +24,9 @@
 
     // this function will operate when the game starts.
 function gameStart() {
-    answer = Math.floor(Math.random() * 101) + 19;
-    $("#random-number").text(answer);
-    // console.log(answer);
+    ranNum = Math.floor(Math.random() * 101) + 19;
+    $("#random-number").text(ranNum);
+    // console.log(ranNum);
 
     green_button = Math.floor(Math.random() * 12) + 1;
     yellow_button = Math.floor(Math.random() * 12) + 1;
@@ -43,37 +43,37 @@ function gameStart() {
 $("#green_crystal").on("click", function () {
     $("#green_crystal").text(green_button);
     yourScore += green_button;
-    $("#your-score").text(yourScore);
+    $("#player_score").text(yourScore);
     // console.log(green_button);
     // console.log(yourScore);
 });
 $("#yellow_crystal").on("click", function () {
     $("#yellow_crystal").text(yellow_button);
     yourScore += yellow_button;
-    $("#your-score").text(yourScore);
+    $("#player_score").text(yourScore);
     
 });
 $("#blue_crystal").on("click", function () {
     $("#blue_crystal").text(blue_button);
     yourScore += blue_button;
-    $("#your-score").text(yourScore);
+    $("#player_score").text(yourScore);
    
 });
 $("#purple_crystal").on("click", function () {
     $("#purple_crystal").text(purple_button);
     yourScore += purple_button;
-    $("#your-score").text(yourScore);
+    $("#player_score").text(yourScore);
    
 });
     // Checking to see if it is a winner or loser here.
 $(".images").on("click", function () {
-    if (yourScore === answer) {
+    if (yourScore === ranNum) {
         wins++;
         $("#wins").text(wins);
         alert("You Win!");
         gameStart();
     }
-    else if (yourScore > answer) {
+    else if (yourScore > ranNum) {
         losses++;
         $("#losses").text(losses);
         alert("You lose!");

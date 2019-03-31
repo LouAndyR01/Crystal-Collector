@@ -70,7 +70,7 @@ h1 {
     float: left;
 }
 
-#total-score-is {
+#total_score {
     clear: both;
     width: 270px;
     background-color: #4fe46d;
@@ -85,7 +85,7 @@ h1 {
     text-align: center;
 }
 
-#your-score {
+#player_score {
     width: 270px;
     height: 83px;
     padding-bottom: 25px;
