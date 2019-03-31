@@ -80,6 +80,3 @@ $(".images").on("click", function () {
 });
 
 gameStart();
-
-
-

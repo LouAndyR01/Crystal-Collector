@@ -63,6 +63,7 @@ h1 {
     width: 125px;
     margin:10px;
     float: left;
+    border-radius: 15px;
 }
 
 #total_score {
