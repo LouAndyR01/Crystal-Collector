@@ -12,99 +12,78 @@
 // Every crystal is to have a random number from 1-12.
 // if it equals, then the win counter goes up or the losing count goes up.
 
-$(document).ready(function() {
-    var Random = Math.floor(Math.random() * 101 + 19)
-
-    $(randomNumWlBox).text(Random);
-
-    // setting the random number for the crystals //
-    var num1 = Math.floor(Math.random() *12 + 1)
-    // console.log(num1);
-    var num2 = Math.floor(Math.random() *12 + 1)
-    // console.log(num2);
-    var num3 = Math.floor(Math.random() *12 + 1)
-    // console.log(num3);
-    var num4 = Math.floor(Math.random() *12 + 1)
-    // console.log(num4);
-
-    var userTotalScore = 0;
+    // globals to start the game.
     var wins = 0;
     var losses = 0;
-    // console.log(wins);
+    var answer;
+    var yourScore = 0;
 
-    $("#numberWins").text(wins);
-    $("#numberLosses").text(losses);
+    // linking buttons to the id's of each crystal on the html.
+    var green_button = $("#green_crystal");
+    var yellow_button = $("#yellow_crystal");
+    var blue_button = $("#blue_crystal");
+    var purple_button = $("#purple_crystal");
 
-        function reset() {
-            random = Math.floor(Math.random() *101 + 19);
-            // console.log (random);
-            $("#randomNumberBox").text(randomNumberBox);
-            num1 = Math.floor(Math.random() *12 + 1);
-            num2 = Math.floor(Math.random() *12 + 1);
-            num3 = Math.floor(Math.random() *12 + 1);
-            num4 = Math.floor(Math.random() *12 + 1);
-            userTotalScore = 0;
-            $("#total").text(userTotalScore);
-        }
+    // this function will operate when the game starts.
+function gameStart() {
+    answer = Math.floor(Math.random() * 101) + 19;
+    $("#random-number").html(answer);
+    // console.log(answer);
 
-        function wins() {
-            alert("You Won!");
-            wins++;
-            $("#numberwins").text(wins);
-            reset();
-        }   
+    green_button = Math.floor(Math.random() * 12) + 1;
+    yellow_button = Math.floor(Math.random() * 12) + 1;
+    blue_button = Math.floor(Math.random() * 12) + 1;
+    purple_button = Math.floor(Math.random() * 12) + 1;
 
-        function losses() {
-            alert("You Lose!");
-            losses++;
-            $("#numberLosses").text(losses);
-            reset();
-        }
-        
-        $(".green").on("click", function() {
-            userTotalScore = userTotalScore + num1;
-            $("#userTotalScore").text(total);
-            if (userTotalScore === randomNumberBox) {
-            wins();
-            }
-            else if (userTotalScore > randomNumberBox) {
-            losses();
-        }
+    yourScore = 0;
+    // console.log(green_button);
+    // console.log(green_button);
+   
+}
 
-        $(".yellow").on("click", function() {
-            userTotalScore= userTotalScore + num2;
-            console.log(userTotalScore + userTotal);
-            $("#totalPoint").text(userTotal);
-            if (userTotalScore === randomNumberBox ) {
-            wins();
-            }
-            else if (userTotalScore > randomNumberBox ) {
-            losses();
-        }       
-        
-        $(".blue").on("click", function() {
-            userTotalScore = userTotalScore + num1;
-            $("#userTotalScore").text(total);
-            if (userTotalScore ===randomNumberBox) {
-            wins();
-            }
-            else if (userTotalScore > randomNumberBox) {
-            losses();
-        }
-        
-        $(".purple").on("click", function() {
-            userTotalScore = userTotalScore + num1;
-            $("#userTotalScore").text(total);
-            if (userTotalScore ===randomNumberBox) {
-            wins();
-            }
-            else if (userTotalScore > randomNumberBox) {
-            losses();
-        }
-    
-          });
-        });
-      });
-   });
+    // on click functions for each button.
+$("#green_crystal").on("click", function () {
+    $("#green_crystal").html(green_button);
+    yourScore += green_button;
+    $("#your-score").html(yourScore);
+    // console.log(green_button);
+    // console.log(yourScore);
 });
+$("#yellow_crystal").on("click", function () {
+    $("#yellow_crystal").html(yellow_button);
+    yourScore += yellow_button;
+    $("#your-score").html(yourScore);
+    
+});
+$("#blue_crystal").on("click", function () {
+    $("#blue_crystal").html(blue_button);
+    yourScore += blue_button;
+    $("#your-score").html(yourScore);
+   
+});
+$("#purple_crystal").on("click", function () {
+    $("#purple_crystal").html(purple_button);
+    yourScore += purple_button;
+    $("#your-score").html(yourScore);
+   
+});
+    // Checking to see if it is a winner or loser here.
+$(".images").on("click", function () {
+    if (yourScore === answer) {
+        wins++;
+        $("#wins").html(wins);
+        alert("You Win!");
+        gameStart();
+    }
+    else if (yourScore > answer) {
+        losses++;
+        $("#losses").html(losses);
+        alert("You lose!");
+        gameStart();
+    }
+});
+
+gameStart();
+
+
 

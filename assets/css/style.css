@@ -3,6 +3,7 @@ body {
     max-height: 1000px; 
     background: url("..//images/background.image2.png"); 
     background-size: 100%;
+    
 }
 
 h1 {
@@ -32,17 +33,18 @@ h1 {
 #random-number {
     width: 270px;
     height: 150px;
-    padding: 10px;
-    background-color: darkcyan;
+    /* padding: 5px; */
+    background-color: #6d878d;
     margin: 10px;
     color: black;
-    font-size: 40px;
+    font-size: 100px;
     float: left;
     border-radius: 15px;
+    text-align: center
 }
 
 #game-count {
-    background-color: aqua;
+    background-color: #08aaf7;
     width: 270px;
     height: 150px;
     padding: 12px;
@@ -59,10 +61,10 @@ h1 {
     clear: both;
 }
 
-#crystal-1,
-#crystal-2,
-#crystal-3,
-#crystal-4 {
+#green_crystal,
+#yellow_crystal,
+#blue_crystal,
+#purple_crystal {
     height: 100px;
     width: 125px;
     margin:10px;
